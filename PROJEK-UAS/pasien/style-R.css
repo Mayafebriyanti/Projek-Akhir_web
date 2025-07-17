@@ -1,0 +1,1046 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Light background for overall page */
+    color: #333;
+    padding-top: 80px; /* Space for the fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Make header fixed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header is on top */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 120px;
+    width: auto;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ef6480; /* Soft Pink */
+}
+
+.login-btn {
+    background-color: #ef6480; /* Soft Pink */
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e05a74; /* Slightly darker pink on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    /* Menggunakan logo Dermalux sebagai background image dan memposisikannya di tengah */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/logo.png') no-repeat center center;
+    background-size: contain; /* Memastikan gambar logo terlihat penuh tanpa terpotong */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-image {
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto 30px auto; /* Tambahkan 'auto' untuk margin kiri dan kanan */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: block;
+    object-fit: contain;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Service Packages Section */
+.service-packages {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-packages h2 {
+    font-size: 2.5em;
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 40px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.package-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.package-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.package-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.package-details h3 {
+    font-size: 1.8em;
+    color: #ef6480; /* Soft Pink */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.package-details p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.package-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.package-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-select {
+    background-color: #ef6480; /* Soft Pink */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-select:hover {
+    background-color: #e05a74; /* Slightly darker pink on hover */
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.featured-products h2 {
+    font-size: 2.5em;
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details h3 {
+    font-size: 1.8em;
+    color: #ef6480; /* Soft Pink */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-add-to-cart {
+    background-color: #ef6480; /* Soft Pink */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #e05a74; /* Slightly darker pink on hover */
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Limit modal height */
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.modal-overlay:target .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #ef6480; /* Soft Pink */
+    font-size: 2em;
+}
+
+.modal-close-css {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 2em;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.modal-close-css:hover {
+    color: #ef6480; /* Soft Pink */
+}
+
+.modal-body {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px;
+}
+
+.modal-body .image-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.modal-body .image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-body .details-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.details-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.details-section p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.price-duration {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.price-duration span:first-child {
+    color: #ef6480; /* Soft Pink */
+}
+
+.duration-badge {
+    background-color: #f0f0f0;
+    color: #777;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.details-section h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.details-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-section ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%23ef6480"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') no-repeat left center;
+    background-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.modal-footer {
+    text-align: right;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.select-button {
+    background-color: #ef6480; /* Soft Pink */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.select-button:hover {
+    background-color: #e05a74; /* Slightly darker pink on hover */
+}
+
+/* Keranjang Specific Styles */
+.cart-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 60px auto 40px auto; /* Adjusted margin-top for spacing */
+}
+
+.cart-section .section-title {
+    font-size: 2.5em;
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.empty-cart-message {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.empty-cart-actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.cart-table th, .cart-table td {
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    text-align: left;
+}
+.cart-table th {
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.cart-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.cart-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.remove-btn {
+    background-color: #e57373;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.remove-btn:hover {
+    background-color: #cc5252;
+}
+
+.total-summary {
+    margin-top: 25px;
+    text-align: right;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+    color: #1a1a2e;
+}
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+.btn-primary {
+    background-color: #ef6480;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.btn-primary:hover {
+    background-color: #e05a74;
+}
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Reservation Specific Styles */
+.reservation-section { /* Renamed from .resev-nav and adjusted to match .cart-section */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px; /* Consistent with cart-section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Consistent with cart-section */
+    max-width: 900px; /* Consistent with cart-section */
+    margin: 60px auto 40px auto; /* Consistent spacing */
+    box-sizing: border-box;
+}
+
+.reservation-section .section-title { /* Added this for consistency with cart-section */
+    font-size: 2.5em; /* Consistent with cart-section */
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group select,
+.form-group input[type="date"],
+.form-group input[type="time"], /* Added input type time here for consistency */
+.cart-summary-textarea { /* Added cart-summary-textarea here */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    background-color: #fefefe;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="time"]:focus { /* Added input type time here for consistency */
+    border-color: #ef6480;
+    box-shadow: 0 0 0 3px rgba(239, 100, 128, 0.2);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #ef6480;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #e05a74;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #ef9a9a;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.error-message h3 {
+    margin-top: 0;
+    color: #d32f2f;
+    font-size: 1.2em;
+}
+
+.error-message ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.error-message li {
+    margin-bottom: 5px;
+}
+
+/* Cart Summary Styles within Reservation Form */
+.cart-summary-for-reservation { /* Added this class for the summary container in Reservasi.php */
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cart-summary-for-reservation h2 {
+    font-size: 1.8em;
+    color: #ef6480;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-summary-for-reservation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.cart-summary-for-reservation li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.cart-summary-for-reservation li:last-child {
+    border-bottom: none;
+}
+
+.cart-summary-for-reservation p strong {
+    color: #333;
+    font-size: 1.2em;
+}
+
+
+/* Status Reservasi Specific Styles */
+.status-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Wider for table content */
+    margin: 60px auto 40px auto; /* Consistent spacing from header */
+}
+
+.status-section .section-title {
+    font-size: 2.5em;
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.empty-status-message {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status-table th, .status-table td {
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.status-table th {
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.status-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.status-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* --- STYLING UNTUK STATUS BADGE (Disesuaikan dengan permintaan warna Anda) --- */
+.status-badge {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    border-radius: 9999px; /* Membuat badge berbentuk pil */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75em; /* Ukuran font lebih kecil */
+    color: white; /* Warna teks default putih */
+    text-align: center;
+    white-space: nowrap; /* Mencegah teks status pecah baris */
+}
+
+.status-badge.pending {
+    background-color: #ef4444; /* Merah untuk Pending */
+}
+
+.status-badge.terkonfirmasi {
+    background-color: #3b82f6; /* Biru untuk Terkonfirmasi */
+}
+
+.status-badge.selesai {
+    background-color: #22c55e; /* Hijau untuk Selesai */
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.item-list li {
+    margin-bottom: 5px;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button {
+    background-color: #ef6480;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #e05a74;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-section .section-title {
+    font-size: 1.4em;
+    color: #ef6480; /* Soft Pink */
+    margin-bottom: 15px;
+}
+
+.footer-section .section-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .cart-section, .reservation-section, .status-section {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .login-btn {
+        margin-top: 15px;
+    }
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn-primary, .btn-secondary, button[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+    .reservation-section .section-title, .status-section .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    /* Responsive table for status page */
+    .status-table, .status-table tbody, .status-table tr, .status-table td, .status-table th {
+        display: block;
+        width: 100%;
+    }
+    .status-table thead {
+        display: none;
+    }
+    .status-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .status-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .status-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px);
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+    .status-table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    header {
+        padding: 10px 0;
+    }
+    .logo img {
+        height: 40px;
+    }
+    nav ul li a {
+        font-size: 0.9em;
+    }
+    .login-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .cart-section .section-title, .status-section .section-title, .reservation-section .section-title {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .total-summary {
+        font-size: 1.2em;
+    }
+    .remove-btn {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+    .btn-primary, .btn-secondary, button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .reservation-section {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .form-group label {
+        font-size: 0.9em;
+    }
+    .form-group select,
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .cart-summary-textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .status-table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .status-table td::before {
+        font-size: 0.8em;
+    }
+}
